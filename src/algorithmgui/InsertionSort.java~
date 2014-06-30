@@ -1,0 +1,65 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+package algorithmgui;
+import java.util.*;
+/**
+ *
+ * @author harj
+ */
+public class InsertionSort{
+
+
+    
+public static void InsertionSort(int [] ArraySize, int ArrayLimit) {
+    int firstOutOfOrder, location, temp;  
+    
+    
+      int[] Array = ArraySize;  
+  
+    for(firstOutOfOrder = 1; firstOutOfOrder < ArrayLimit; firstOutOfOrder++) { //Starts at second term, goes until the end of the array.
+        if(ArraySize[firstOutOfOrder] < Array[firstOutOfOrder - 1]) { //If the two are out of order, we move the element to its rightful place.
+            temp = Array[firstOutOfOrder];
+            location = firstOutOfOrder;
+            
+            do { //Keep moving down the array until we find exactly where it's supposed to go.
+                Array[location] = Array[location-1];
+                location--;
+            }
+            while (location > 0 && Array[location-1] > temp);
+            
+            Array[location] = temp;
+        }
+    
+            }
+    
+    
+    }
+
+ 
+    }
+
+
+    
+          
+      
+
+
+
+    
+     
+        
+      
+    
+  
+     
+
+
+        
+    
+
+
+   
